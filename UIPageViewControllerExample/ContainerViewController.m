@@ -23,7 +23,8 @@
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                         options:nil];
     
-    [[self.pageController view] setFrame:[[self view] bounds]];
+//    [[self.pageController view] setFrame:[[self view] bounds]];
+    [[self.pageController view] setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width - 50)];
     
     // Asignamos el datasource
     self.pageController.dataSource = self;
@@ -37,6 +38,11 @@
     [self addChildViewController:self.pageController];
     [[self view] addSubview:[self.pageController view]];
     [self.pageController didMoveToParentViewController:self];
+    
+    // Apariencia de los dots
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {

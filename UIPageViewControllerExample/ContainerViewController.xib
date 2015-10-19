@@ -13,7 +13,35 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQa-vm-xen">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Empezar"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PQa-vm-xen" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9M5-VS-LSx"/>
+                <constraint firstAttribute="bottom" secondItem="PQa-vm-xen" secondAttribute="bottom" constant="8" id="zRI-gZ-tjS"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="PQa-vm-xen"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="9M5-VS-LSx"/>
+                    <exclude reference="zRI-gZ-tjS"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="PQa-vm-xen"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="9M5-VS-LSx"/>
+                    <include reference="zRI-gZ-tjS"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>
